@@ -5,6 +5,7 @@ Slack messenger was used to keep each other updated on parts of the project that
 
 ## Presentation:
 * Selected topic:
+[POSSIBLE USA ONLY DATA]
     * Prediction of which demographic group is most at risk for death by suicide.    
 * Reason why the topic was selected:
     * With awareness in the mental illness epidemic rising, it is important to research all aspects of mental illnesses. Specifically, death by suicide will be the area in which we are exploring. Learning more about patterns in certain populations across the globe can help put public health initiatives in place to prevent such a rise in numbers.
