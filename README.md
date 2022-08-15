@@ -13,7 +13,7 @@ Slack messenger was used to keep each other updated on parts of the project that
     * The dataset is from kaggle, posted by user fedesoriano.
 * Questions the dataset hopes to answer:
     * Which demographic group is most at risk for a stroke?
-    * With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, sex, work type, marrital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
+    * With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, gender, work type, marital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
     * Being knowledgable about the at-risk populations can help implement programs to focus on these groups. If enough prediction and research is done, it is the hope for public health initiatives to gain funding to support the prevention of strokes. 
 
 ## Resources:
