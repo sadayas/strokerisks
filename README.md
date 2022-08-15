@@ -1,8 +1,10 @@
-# Which people are at risk for having a stroke?
+# Which  health factors increase the risk for having a stroke?
 
 ## General:
 ### Communication Protocols:
 Slack messenger was used to keep each other updated on parts of the project that have been completed and committed.
+Zoom
+Emails
 
 ## Presentation:
 * Selected topic:
