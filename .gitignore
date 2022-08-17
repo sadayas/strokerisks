@@ -1,5 +1,5 @@
 #CVS
-healthcare-dataset-stroke-data.cvs
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
