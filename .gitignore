@@ -5,9 +5,6 @@
 /sample_lung_cancer_classification_mlm.ipynb
 /suicide_data_readme.txt
 
-#CVS
-*.csv
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
