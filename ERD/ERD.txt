@@ -1,0 +1,55 @@
+gender
+-
+patient_id PK
+gender
+stroke FK
+
+age
+-
+patient_id PK
+age
+stroke FK
+
+hypertension
+-
+patient_id PK
+hypertension
+stroke FK
+
+heart_disease
+-
+patient_id PK
+heart_disease
+stroke FK
+
+avg_glucose_level
+-
+patient_id PK
+avg_glucose_level
+stroke FK
+
+stress_factors
+-
+patient_id PK
+ever_married
+work_type
+Residence_type
+stroke FK
+
+smoking_status
+-
+patient_id PK
+smoking_status
+stroke FK
+
+bmi
+-
+patient_id PK
+bmi
+stroke FK
+
+stroke_risk_level
+-
+low
+medium
+high
