@@ -1,55 +1,29 @@
-gender
+demographic_factors
 -
-patient_id PK
-gender
-stroke FK
-
+pt_id FK >- stress_factors.pt_id
 age
--
-patient_id PK
-age
-stroke FK
+gender
+ever_married
+work_type
+residence_type
 
-hypertension
+health_factors
 -
-patient_id PK
-hypertension
-stroke FK
-
-heart_disease
--
-patient_id PK
-heart_disease
-stroke FK
-
+pt_id FK >- stress_factors.pt_id
 avg_glucose_level
--
-patient_id PK
-avg_glucose_level
-stroke FK
+bmi
+heart_disease
+hypertension
+smoking_status
+stroke
 
 stress_factors
 -
-patient_id PK
+pt_id PK
 ever_married
 work_type
-Residence_type
-stroke FK
-
-smoking_status
--
-patient_id PK
-smoking_status
-stroke FK
-
+residence_type
 bmi
--
-patient_id PK
-bmi
-stroke FK
-
-stroke_risk_level
--
-low
-medium
-high
+hypertension
+smoking_status
+stroke
