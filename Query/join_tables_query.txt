@@ -1,0 +1,42 @@
+-- make table for age bmi and stroke
+CREATE TABLE age_bmi_stroke AS
+	SELECT age, bmi, stroke
+	FROM stroke_data
+	WHERE age <= 70;
+	
+SELECT * FROM age_bmi_stroke;
+
+-- make table for demogrphic factors
+CREATE TABLE demographic_factors AS
+	SELECT pt_id, age, gender, ever_married, work_type, residence_type
+	FROM stroke_data;
+
+--show table demographic_factors
+SELECT * FROM demographic_factors;
+
+-- make table for demographic factors
+CREATE TABLE health_factors AS
+	SELECT pt_id, avg_glucose_level, bmi, heart_disease, hypertension, smoking_status, stroke
+	FROM stroke_data;
+
+--show table health_factors
+SELECT * FROM health_factors;
+
+--join demographic factors and health factors to create a table for factors that contribute to stress 
+--code doubled rows
+-- CREATE TABLE stress_factors AS
+-- SELECT d.pt_id, d.ever_married, d.work_type, d.residence_type, h.bmi, h.hypertension, h.smoking_status, h.stroke
+-- FROM demographic_factors as d
+-- INNER JOIN health_factors as h ON d.pt_id = h.pt_id;
+
+-- drop failed stress_factors table
+-- DROP TABLE stress_factors;
+
+--join demographic factors and health factors to create a table for factors that contribute to stress 
+CREATE TABLE stress_factors AS
+SELECT d.pt_id, d.ever_married, d.work_type, d.residence_type, h.bmi, h.hypertension, h.smoking_status, h.stroke
+FROM demographic_factors as d
+LEFT JOIN health_factors as h ON d.pt_id = h.pt_id;
+
+-- show stress_factors table
+SELECT * FROM stress_factors;
