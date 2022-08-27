@@ -1,0 +1,29 @@
+demographic_factors
+-
+pt_id FK >- stress_factors.pt_id
+age
+gender
+ever_married
+work_type
+residence_type
+
+health_factors
+-
+pt_id FK >- stress_factors.pt_id
+avg_glucose_level
+bmi
+heart_disease
+hypertension
+smoking_status
+stroke
+
+stress_factors
+-
+pt_id PK
+ever_married
+work_type
+residence_type
+bmi
+hypertension
+smoking_status
+stroke
