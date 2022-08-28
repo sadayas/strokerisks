@@ -5,7 +5,7 @@
 Slack messenger, Discord, and Zoom were used to keep each other updated on parts of the project that have been completed and committed. 
 
 
-## Presentation:
+## Outline:
 * Selected topic:
     * Which health factors increase the risk for having a stroke?
 * Reason why the topic was selected:
@@ -21,13 +21,8 @@ Slack messenger, Discord, and Zoom were used to keep each other updated on parts
     * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
 
 
-## Resources:
-https://www.cdc.gov/stroke/facts.htm
 
 
-Segment 2 Rubric:
-
-Presentation:
 ### Data Exploration
 
 The dataset has 9 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
@@ -51,18 +46,7 @@ For data exploration, rows with null values were dropped to keep the amount of i
 ### Data Analysis
 
 
-GitHub: 
-README.md:
-* Outline of the project (this may include
-images, but should be easy to follow and
-digest)
-Note: The descriptions and explanations
-required in all other project deliverables
-should also be in your README.md as
-part of your outline, unless otherwise
-noted.
-
-MLM:
+### Machine Learning Model:
 * Description of preliminary data
 preprocessing 
 * Description of preliminary feature
@@ -80,21 +64,16 @@ training and testing sets
 
 
 Database Integration:
-✓ Database stores static data for use during the project
-✓ Database interfaces with the project in some format (e.g., scraping updates the database)
-✓ Includes at least two tables (or collections, if using MongoDB)
-    * Query folder
-✓ Includes at least one join using the database language (not including any joins in Pandas)
-    * Query folder
-✓ Includes at least one connection string (using SQLAlchemy or PyMongo)
-	* Transfer code
-If you use a SQL database, you must provide your ERD with relationships.
-	* Query folder
+* ERD and Query folders
+* Stroke_Data_transfer.ipynb
 
 Dashboard:
 * Storyboard on a Google Slide(s)
-    * link: https://docs.google.com/presentation/d/1wtpTPGUZmihYq6xbEQ2ToIgmghP479mctH30H1Amqxs/edit?usp=sharing
+    * https://docs.google.com/presentation/d/1wtpTPGUZmihYq6xbEQ2ToIgmghP479mctH30H1Amqxs/edit?usp=sharing
 * Description of the tool(s) that will be used to create the final dashboard
 	* Tableau
 * Description of interactive element(s)
 	* Be able to input your info on a sliding scale and gain insight into your stroke risk level 
+
+## Resources:
+https://www.cdc.gov/stroke/facts.htm
