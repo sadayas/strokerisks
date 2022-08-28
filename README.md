@@ -34,9 +34,10 @@ These attributes include:
 * Residence: What kind of community does the patient live in? Urban or rural
 * Hypertension: Does the patient have high blood pressure? yes or no
 * Heart Disease: Does the patient have a heart disease? yes or no
-* Average glucose level: Integer answer
+* Average glucose level: Integer answer 
     * A glucose level of above 126 mg/dL indicates the patient may have diabetes. Does the patient have a healthy average glucose level? 
-* Body mass index: integer answer
+    * Data was binned to reduce noise and visualize low glucose level: '<70', normal level: '70-100', pre-diabetic glucose level: '101-125', diabetic glucose level: '>126'.
+* Body mass index: Integer answer
     * A BMI over 25 indicates the patient may be overweight; a BMI under 19 indicates the patient may be underweight. This value is dependent on their height and weight. 
 * Stroke: Has the patient had a stroke? yes or no
 
@@ -47,14 +48,11 @@ For data exploration, rows with null values were dropped to keep the amount of i
 
 
 ### Machine Learning Model:
-* Description of preliminary data
-preprocessing 
-* Description of preliminary feature
-engineering and preliminary feature
-selection, including their decision-making
-process 
-* Description of how data was split into
-training and testing sets 
+* preliminary data preprocessing 
+    * Any columns with null values were dropped to eliminate incorrect view of data. The 9 columns came with a mixture of values: binary, string and integer. For the model to be able to process the data easily, all columns with yes or no answers were changed to binary values. The columns that had more complex data were mapped with a dictionary of integers from 0-3 or 4.   
+* preliminary feature engineering and preliminary feature selection, including their decision-making process 
+    * 
+* Training and testing
     * The data was split 80% in training and 20% in testing. In recent studies, it has been shown that this split avoids overfitting. Overfitting is an issue where the model will learn from the training data so well, it will not be able to work on data the model has not seen before.   
 * Explanation of model choice
     * Benefits
