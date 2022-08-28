@@ -25,9 +25,10 @@ Slack messenger, Discord, and Zoom were used to keep each other updated on parts
 
 ### Data Exploration
 
-The dataset has 9 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
+The dataset has 11 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
 These attributes include:
 * Gender: male, female, or other
+* Age: integer answer
 * Marital Status: Is the patient married? yes or no
 * Work: What does the patient do for work? Private, self-employed, government job, children, unemployed (note: the values "children" and "unemployed" were joined to make the   value "no_work")
 * Smoking status: Does the patient smoke? Never smoked, formerly smoked, smokes, unknown
@@ -49,7 +50,7 @@ For data exploration, rows with null values were dropped to keep the amount of i
 
 ### Machine Learning Model:
 * preliminary data preprocessing 
-    * Any columns with null values were dropped to eliminate incorrect view of data. The 9 columns came with a mixture of values: binary, string and integer. For the model to be able to process the data easily, all columns with yes or no answers were changed to binary values. The columns that had more complex data were mapped with a dictionary of integers from 0-3 or 4.   
+    * Any columns with null values were dropped to eliminate incorrect view of data. The 11 columns came with a mixture of values: binary, string and integer. For the model to be able to process the data easily, all columns with yes or no answers were changed to binary values. The columns that had more complex data were mapped with a dictionary of integers from 0-3 or 4.   
 * preliminary feature engineering and preliminary feature selection, including their decision-making process 
     * 
 * Training and testing
@@ -58,7 +59,7 @@ For data exploration, rows with null values were dropped to keep the amount of i
     * Benefits
         * Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 9 variables in this dataset with no issues. 
     * Limitations
-        * Limitations of using the Random Forest model include difficult interpretation, speed issues on real-time data, and ineffective for linear data. 
+        * Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
 
 
 Database Integration:
