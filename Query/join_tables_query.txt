@@ -40,3 +40,17 @@ LEFT JOIN health_factors as h ON d.pt_id = h.pt_id;
 
 -- show stress_factors table
 SELECT * FROM stress_factors;
+
+CREATE TABLE bmi_stroke AS
+SELECT pt_id, bmi, stroke
+FROM stroke_data;
+
+SELECT * FROM bmi_stroke 
+ORDER BY bmi DESC;
+
+-- make table with pt that had a stroke
+CREATE TABLE yes_stroke AS
+SELECT * FROM stroke_data
+WHERE stroke='Yes';
+
+SELECT * FROM yes_stroke;
