@@ -50,7 +50,7 @@ For data exploration, rows with null values were dropped to keep the amount of i
 
 ### Machine Learning Model:
 * preliminary data preprocessing 
-    * Any columns with null values were dropped to eliminate incorrect view of data. The 11 columns came with a mixture of values: binary, string and integer. For the model to be able to process the data easily, all columns with yes or no answers were changed to binary values. The columns that had more complex data were mapped with a dictionary of integers from 0-3 or 4.   
+    * Any columns with null values were dropped to eliminate incorrect view of data. The 11 columns came with a mixture of values: binary, string and integer. OneHotEncoder was used to encode all values that were not binary.
 * preliminary feature engineering and preliminary feature selection, including their decision-making process 
     * 
 * Training and testing
