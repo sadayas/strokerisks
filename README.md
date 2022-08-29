@@ -60,11 +60,12 @@ For data exploration, rows with null values were dropped to keep the amount of i
         * Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 9 variables in this dataset with no issues. 
     * Limitations
         * Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
-
+*Continued Testing, removal of certain columns to have a more effective output.
 
 Database Integration:
 * ERD and Query folders
 * Stroke_Data_transfer.ipynb
+* scaleandmachinelearn.ipynb
 
 Dashboard:
 * Storyboard on a Google Slide(s)
