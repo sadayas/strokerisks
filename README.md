@@ -14,8 +14,9 @@ Slack messenger, Discord, and Zoom were used to keep each other updated on parts
     * The dataset is from kaggle, posted by user fedesoriano.
 * Questions the dataset hopes to answer:
     * Which stress factors increase risk for having a stroke?
+	* Work type, residence type, marital status, smoking status?
     * Which health factors increase the risk for having a stroke?
-      * Hypertension? Age? BMI? 
+      * Hypertension, glucose level, BMI?
     * Which demographic group is most at risk for a stroke?
     * With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, gender, work type, marital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
     * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
@@ -25,7 +26,7 @@ Slack messenger, Discord, and Zoom were used to keep each other updated on parts
 
 ### Data Exploration
 
-The dataset has 11 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
+The dataset has 10 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
 These attributes include:
 * Gender: male, female, or other
 * Age: integer answer
@@ -54,7 +55,7 @@ Data that had numerical values were normalized using the normalization formula: 
 
 
 ### Data Analysis
-Of the 
+Of the 43400 patients, 783 of them had a stroke. 
 
 ### Machine Learning Model:
 * preliminary data preprocessing 
@@ -65,18 +66,15 @@ Of the
     * The data was split 80% in training and 20% in testing. In recent studies, it has been shown that this split avoids overfitting. Overfitting is an issue where the model will learn from the training data so well, it will not be able to work on data the model has not seen before.   
 * Explanation of model choice
     * Benefits
-        * Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 9 variables in this dataset with no issues. 
+        * Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 10 variables in this dataset with no issues. 
     * Limitations
         * Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
-<<<<<<< HEAD
 * Description of how they have trained the model thus far, and any additional training that will take place
     * 
 * Description of current accuracy score
     * 
-=======
 *Continued Testing, removal of certain columns to have a more effective output.
 
->>>>>>> 7c7e13fe252b7b3459109348ae83efaac13c86fd
 Database Integration:
 * ERD and Query folders
 * Stroke_Data_transfer.ipynb
