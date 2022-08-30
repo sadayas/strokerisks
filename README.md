@@ -44,6 +44,7 @@ Data that had numerical values were normalized using the normalization formula: 
 
 ### Data Analysis
 Of the 43400 patients, 783 of them had a stroke. 
+** upload images from data exploration **
 
 ### Machine Learning Model:
 scaleandmachinelearn-CURRENT.ipynb
