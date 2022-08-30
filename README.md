@@ -29,8 +29,8 @@ The dataset has 11 health or demographic attributes that could possible lead to 
 These attributes include:
 * Gender: male, female, or other
 * Age: integer answer
-* Marital Status: Is the patient married? yes or no
-* Work: What does the patient do for work? Private, self-employed, government job, children, unemployed (note: the values "children" and "unemployed" were joined to make the   value "no_work")
+* Marital Status: Has the patient ever been married? yes or no
+* Work: What does the patient do for work? Private, self-employed, government job, children, unemployed (note: the values "children" and "unemployed" were joined to make the   value "Never_worked")
 * Smoking status: Does the patient smoke? Never smoked, formerly smoked, smokes, unknown
 * Residence: What kind of community does the patient live in? Urban or rural
 * Hypertension: Does the patient have high blood pressure? yes or no
@@ -42,7 +42,15 @@ These attributes include:
     * A BMI over 25 indicates the patient may be overweight; a BMI under 19 indicates the patient may be underweight. This value is dependent on their height and weight. 
 * Stroke: Has the patient had a stroke? yes or no
 
-For data exploration, rows with null values were dropped to keep the amount of information for each patient consistent. 
+During data preprocessing, the 'gender' column had a third variable of 'other'. Due to not knowing what the parameters were when the data was taken, and there were no patients that chose 'other' as their gender who also had a stroke, so that data was dropped. This seemed like an easy decision because there were only 11 values that were omitted. In a different analysis where we had more data for that category, we could explore other identities as part of the project.
+
+The column 'bmi' had 192 null values. Of these 192, 140 of these patients had a stroke. Because of the high yield of strokes from this subset of data, we decided to fill the null values with an average of all the bmi's from the data.
+
+The column 'smoking_status' had 145 null values for patients who had a stroke. Because only 783 people in the dataset had a stroke, we decided to keep the smoking status null values and replace them with a string value of 'unknown'. 
+
+The columns that had yes/no (or 1/0) answers were left as is. Later in machine learning preprocessing, the string answers will be turn into binary values.
+
+Data that had numerical values were normalized using the normalization formula: (x - xmin) / (xmax - xmin). These columns included 'bmi', 'avg_glucose_level' and 'bmi'. The original data was kept in the .csv file and just added as new columns. 
 
 
 ### Data Analysis
