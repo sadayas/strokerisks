@@ -21,9 +21,6 @@ Slack messenger, Discord, and Zoom were used to keep each other updated on parts
     * With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, gender, work type, marital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
     * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
 
-
-
-
 ### Data Exploration
 
 The dataset has 10 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
@@ -58,35 +55,38 @@ Data that had numerical values were normalized using the normalization formula: 
 Of the 43400 patients, 783 of them had a stroke. 
 
 ### Machine Learning Model:
+scaleandmachinelearn-CURRENT.ipynb
 * preliminary data preprocessing 
-    * Any columns with null values were dropped to eliminate incorrect view of data. The 11 columns came with a mixture of values: binary, string and integer. OneHotEncoder was used to encode all values that were not binary.
+    * Data was cleaned and during the data exploration phase. The 11 columns came with a mixture of values: binary, string and integer. OneHotEncoder was used to encode all values that were not binary already. These features included: average glucose level - normalized, age - normalized, bmi - normalized, work type, residence type, smoking status, gender and marriage status.
 * preliminary feature engineering and preliminary feature selection, including their decision-making process 
     * 
 * Training and testing
     * The data was split 80% in training and 20% in testing. In recent studies, it has been shown that this split avoids overfitting. Overfitting is an issue where the model will learn from the training data so well, it will not be able to work on data the model has not seen before.   
-* Explanation of model choice
+* Random Forest model:
     * Benefits
         * Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 10 variables in this dataset with no issues. 
     * Limitations
         * Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
 * Description of how they have trained the model thus far, and any additional training that will take place
     * 
-* Description of current accuracy score
-    * 
+-----image here-----
+* Accuracy score
+    * The current accuracy score for the Random Forest model is 98%. Despite the high accuracy score, the model is not condusive to predicting strokes. When predicting or testing health care data, it is important to have a high true positive number and low false negative number. In the confusion matrix shown above, we can see the false negative value (195) is much higher than the true positive number (1). This means 195 strokes happened, but were predicted to not happen. 
+</br>
 *Continued Testing, removal of certain columns to have a more effective output.
 
 Database Integration:
 * ERD and Query folders
 * Stroke_Data_transfer.ipynb
-* scaleandmachinelearn-CURRENT.ipynb
 
-Dashboard:
+* Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
 * Storyboard on a Google Slide(s)
     * https://docs.google.com/presentation/d/1wtpTPGUZmihYq6xbEQ2ToIgmghP479mctH30H1Amqxs/edit?usp=sharing
 * Description of the tool(s) that will be used to create the final dashboard
 	* Tableau
 * Description of interactive element(s)
-	* Be able to input your info on a sliding scale and gain insight into your stroke risk level 
+	* Be able to choose filters that match the users' factors and gain insight into your stroke risk level 
 
 ## Resources:
-https://www.cdc.gov/stroke/facts.htm
+https://www.cdc.gov/stroke/facts.htm </br>
+https://www.acls.net/stroke-information-and-resources </br>
