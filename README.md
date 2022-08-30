@@ -1,12 +1,4 @@
-#Predicting strokes based on health and stress factors
-
-## General:
-### Communication Protocols:
-Slack messenger, Discord, and Zoom were used to keep each other updated on parts of the project that have been completed and committed. 
-
-
-## Outline:
-* Can we predict someone having a stroke based on health, stress, and demographic factors?
+## Can we predict someone having a stroke based on health, stress, and demographic factors?
 * Reason why the topic was selected:
     * Strokes are one of the top leading causes of death in the world. Even if someone does not die from a stroke, it can leave the patient with long lasting effects that greatly impact the quality of their life. If there are simple lifestyle changes people can make to decrease their risk of having a stroke, it is worth the sacrifices to prevent this life altering ailment.  
 * Description of data source:
@@ -90,3 +82,6 @@ Database Integration:
 ## Resources:
 https://www.cdc.gov/stroke/facts.htm </br>
 https://www.acls.net/stroke-information-and-resources </br>
+
+### Communication Protocols:
+Slack messenger, Discord, and Zoom were used to keep each other updated on parts of the project that have been completed and committed. 
