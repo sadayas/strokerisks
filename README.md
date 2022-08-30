@@ -80,7 +80,7 @@ Of the
 Database Integration:
 * ERD and Query folders
 * Stroke_Data_transfer.ipynb
-* scaleandmachinelearn.ipynb
+* scaleandmachinelearn-CURRENT.ipynb
 
 Dashboard:
 * Storyboard on a Google Slide(s)
