@@ -50,11 +50,11 @@ Of the 43400 patients, 783 of them had a stroke.
 
 ### Machine Learning Model:
 [Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
-#### Data preprocessing and feature engineering
-    * The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
-    * Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1.  
-    * These features were relabeled as: average glucose level - normalized, age - normalized, bmi - normalized, .
-#### Feature selection 
+#### Data preprocessing, feature engineering, feature selection
+* The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
+* Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1.  
+* These features were added to the data as: average glucose level - normalized, age - normalized, and bmi - normalized. The scaled features were used in the model instead of the raw data.
+
 ##### Random Forest model:
 * Benefits
 	* Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple 		features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are 		multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 10 variables in this dataset with 		no issues. 
