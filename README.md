@@ -77,12 +77,7 @@ Of the 43400 patients, 783 of them had a stroke.
 
 ### Dashboard:
 * Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
-* Storyboard on a Google Slide(s)
-    * https://docs.google.com/presentation/d/1wtpTPGUZmihYq6xbEQ2ToIgmghP479mctH30H1Amqxs/edit?usp=sharing
-* Description of the tool(s) that will be used to create the final dashboard
-	* Tableau
-* Description of interactive element(s)
-	* Be able to choose filters that match the users' factors and gain insight into your stroke risk level 
+
 
 ## Resources:
 https://www.cdc.gov/stroke/facts.htm </br>
