@@ -77,6 +77,7 @@ Of the 43400 patients, 783 of them had a stroke.
 
 ### Dashboard:
 * Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
+[![Stroke_Risk_Data_Dashboard](https://user-images.githubusercontent.com/98570777/187893540-858bb4bb-448f-4df4-b689-77cc60a250dd.png)](https://public.tableau.com/app/profile/vienna.rynerson/viz/StrokeRisk_16619322782310/StrokeRisk?publish=yes)
 
 
 ## Resources:
