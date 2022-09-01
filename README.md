@@ -13,7 +13,7 @@
     * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
 
 ### Data Exploration
-[Stroke_Data_Exploration.ipynb](https://github.com/sadayas/strokerisks/blob/main/Stroke_Data_Exploration.ipynb)
+[Stroke_Data_Exploration.ipynb](https://github.com/sadayas/strokerisks/blob/main/Stroke_Data_Exploration.ipynb) </br>
 The dataset has 10 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
 These attributes include:
 * Gender: male, female, or other
@@ -44,17 +44,18 @@ Data that had numerical values were normalized using the min-max feature scaling
 
 ### Data Analysis
 Of the 43400 patients, 783 of them had a stroke. 
-https://github.com/sadayas/strokerisks/blob/main/Resources/work_type%20stroke.jpg</br>
+![work_type stroke](https://user-images.githubusercontent.com/98570777/187815599-bfbf94cb-b8a0-44b8-973c-475c75aa392d.jpg)
+</br>
 
 
 ### Machine Learning Model:
-[Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)
-* Data preprocessing and feature engineering
+[Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
+#### Data preprocessing and feature engineering
     * The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
     * Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1.  
     * These features were relabeled as: average glucose level - normalized, age - normalized, bmi - normalized, .
-* Feature selection 
-* Random Forest model:
+#### Feature selection 
+##### Random Forest model:
 * Benefits
 	* Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple 		features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are 		multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 10 variables in this dataset with 		no issues. 
 * Limitations
@@ -72,9 +73,9 @@ https://github.com/sadayas/strokerisks/blob/main/Resources/work_type%20stroke.jp
     * The sensitivity/recall percentage is 1%. This is the measure of how many people had a stroke and were correctly diagnosed. An effective model should have a very high sensitivity percentage. 
 </br>
 
-Database Integration:
+### Database Integration:
 * ERD and Query folders
-* Stroke_Data_transfer.ipynb
+* [SQL_train_stroke_data.ipynb]()
 
 * Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
 * Storyboard on a Google Slide(s)
