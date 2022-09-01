@@ -83,6 +83,3 @@ Database Integration:
 ## Resources:
 https://www.cdc.gov/stroke/facts.htm </br>
 https://www.acls.net/stroke-information-and-resources </br>
-
-### Communication Protocols:
-Slack messenger, Discord, and Zoom were used to keep each other updated on parts of the project that have been completed and committed. 
