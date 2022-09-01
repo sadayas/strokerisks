@@ -75,6 +75,7 @@ Of the 43400 patients, 783 of them had a stroke.
 * ERD and Query folders
 * [SQL_train_stroke_data.ipynb](https://github.com/sadayas/strokerisks/blob/main/SQL_train_stroke_data.ipynb)
 
+### Dashboard:
 * Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
 * Storyboard on a Google Slide(s)
     * https://docs.google.com/presentation/d/1wtpTPGUZmihYq6xbEQ2ToIgmghP479mctH30H1Amqxs/edit?usp=sharing
