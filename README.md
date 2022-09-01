@@ -52,7 +52,7 @@ Of the 43400 patients, 783 of them had a stroke.
 [Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
 #### Data preprocessing, feature engineering, feature selection
 * The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
-* Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1.  
+* Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1. Using a range of (0,1) makes it so the normalized value loses the least amount of precision while the model is being processed.  
 * These features were added to the data as: average glucose level - normalized, age - normalized, and bmi - normalized. The scaled features were used in the model instead of the raw data.
 
 ##### Random Forest model:
