@@ -13,7 +13,7 @@
     * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
 
 ### Data Exploration
-Stroke_Data_Exploration.ipynb
+[Stroke_Data_Exploration.ipynb](https://github.com/sadayas/strokerisks/blob/main/Stroke_Data_Exploration.ipynb)
 The dataset has 10 health or demographic attributes that could possible lead to the target variable: having a stroke or not. 
 These attributes include:
 * Gender: male, female, or other
@@ -26,7 +26,7 @@ These attributes include:
 * Heart Disease: Does the patient have a heart disease? yes or no
 * Average glucose level: Integer answer 
     * A glucose level of above 126 mg/dL indicates the patient may have diabetes. Does the patient have a healthy average glucose level? 
-    * Data was binned to reduce noise and visualize low glucose level: '<70', normal level: '70-100', pre-diabetic glucose level: '101-125', diabetic glucose level: '>126'.
+    * Data was binned for visualization to reduce noise and visualize low glucose level: '<70', normal level: '70-100', pre-diabetic glucose level: '101-125', diabetic glucose level: '>126'.
 * Body mass index: Integer answer
     * A BMI over 25 indicates the patient may be overweight; a BMI under 19 indicates the patient may be underweight. This value is dependent on their height and weight. 
 * Stroke: Has the patient had a stroke? yes or no
@@ -37,27 +37,31 @@ The column 'bmi' had 192 null values. Of these 192, 140 of these patients had a 
 
 The column 'smoking_status' had 145 null values for patients who had a stroke. Because only 783 people in the dataset had a stroke, we decided to keep the smoking status null values and replace them with a string value of 'unknown'. 
 
-The columns that had yes/no (or 1/0) answers were left as is. Later in machine learning preprocessing, the string answers will be turn into binary values.
+The columns that had yes/no (or 1/0) answers were left as is. Later in machine learning preprocessing, the categorical data will be encoded to binary values.
 
-Data that had numerical values were normalized using the normalization formula: (x - xmin) / (xmax - xmin). These columns included 'bmi', 'avg_glucose_level' and 'bmi'. The original data was kept in the .csv file and just added as new columns to prepare for OneHotEncoder. 
+Data that had numerical values were normalized using the min-max feature scaling formula: (x - xmin) / (xmax - xmin). These columns included 'bmi', 'avg_glucose_level' and 'bmi'. The original data was kept in the .csv file and just added as new columns to prepare for OneHotEncoder. 
 
 
 ### Data Analysis
 Of the 43400 patients, 783 of them had a stroke. 
-** upload images from data exploration **
+https://github.com/sadayas/strokerisks/blob/main/Resources/work_type%20stroke.jpg</br>
+
 
 ### Machine Learning Model:
-scaleandmachinelearn-CURRENT.ipynb
-* preliminary data preprocessing 
-    * Data was cleaned and during the data exploration phase. The 11 columns came with a mixture of values: binary, string and integer. OneHotEncoder was used to encode all values that were not binary already. These features included: average glucose level - normalized, age - normalized, bmi - normalized, work type, residence type, smoking status, gender and marriage status.
-* preliminary feature engineering and preliminary feature selection, including their decision-making process 
-    * Random Forest model:
-    * Benefits
+[Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)
+* Data preprocessing and feature engineering
+    * The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
+    * Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1.  
+    * These features were relabeled as: average glucose level - normalized, age - normalized, bmi - normalized, .
+* Feature selection 
+* Random Forest model:
+* Benefits
 	* Since predictions on health care data need to be precise and accurate, Random Forest was used as the machine learning model. The dataset has multiple 		features and a clear target variable. By using Random Forest instead of another model, we are preventing the risk of overfitting because there are 		multiple trees being used instead of one tree. Random Forest can handle up to 60 variables, so it was able to handle the 10 variables in this dataset with 		no issues. 
-    * Limitations
+* Limitations
 	* Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
 * Training and testing
     * The data was split 80% in training and 20% in testing. In recent studies, it has been shown that this split avoids overfitting. Overfitting is an issue where the model will learn from the training data so well, it will not be able to work on data the model has not seen before.   
+ 
 * Description of how they have trained the model thus far, and any additional training that will take place
     * The model has been trained by changing test size and random state. The initial worry was there were no stroke positive patient data going into the training portion, but with continued training, it seems that either the model is not a good fit for the data, or we need to use a dataset with more stroke positive patients in it.  
     * Continued training: removal of low importance features (i.e.: work type, marriage status, smoking status).
