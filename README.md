@@ -62,9 +62,7 @@ Of the 43400 patients, 783 of them had a stroke.
 	* Limitations of using the Random Forest model include difficult to visualize, speed issues on real-time data, and ineffective for linear data. 
 * Training and testing
     * The data was split 80% in training and 20% in testing. In recent studies, it has been shown that this split avoids overfitting. Overfitting is an issue where the model will learn from the training data so well, it will not be able to work on data the model has not seen before.   
- 
-* Description of how they have trained the model thus far, and any additional training that will take place
-    * The model has been trained by changing test size and random state. The initial worry was there were no stroke positive patient data going into the training portion, but with continued training, it seems that either the model is not a good fit for the data, or we need to use a dataset with more stroke positive patients in it.  
+     * The model has been trained by changing test size and random state. The initial worry was there were no stroke positive patient data going into the training portion, but with continued training, it seems that either the model is not a good fit for the data, or we need to use a dataset with more stroke positive patients in it.  
     * Continued training: removal of low importance features (i.e.: work type, marriage status, smoking status).
 
 ![cm_8292022jpg](https://user-images.githubusercontent.com/98570777/187367755-0bae716a-034a-4911-9ee9-cc66c3d641d8.jpg)
