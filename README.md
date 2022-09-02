@@ -3,14 +3,10 @@
     * Strokes are one of the top leading causes of death in the world. Even if someone does not die from a stroke, it can leave the patient with long lasting effects that greatly impact the quality of their life. If there are simple lifestyle changes people can make to decrease their risk of having a stroke, it is worth the sacrifices to prevent this life altering ailment.  
 * Description of data source:
     * The dataset is from kaggle, posted by user Lirilkumar Amal.
-* Questions the dataset hopes to answer:
-    * Which stress factors increase risk for having a stroke?
-	* Work type, residence type, marital status, smoking status?
-    * Which health factors increase the risk for having a stroke?
-    	* Hypertension, glucose level, BMI?
-    * Which demographic group is most at risk for a stroke?
-    * With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, gender, work type, marital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
-    * Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
+* Questions
+	* Can we predict someone having a stroke based on health, stress, and/or demographic factors?
+	* With the dataset, the hope is to predict which individuals will be more at risk to have a stroke based on their age, gender, work type, marital status, residence type, average glucose levels, bmi, smoking status, and blood pressure. 
+	* Being knowledgable about the at-risk populations can help implement tests and health coaching programs to focus on these groups. If enough research is done, it is the hope for health care practicioners to gain insight as to which tests should be given to prevent strokes. 
 
 ### Data Exploration
 [Stroke_Data_Exploration.ipynb](https://github.com/sadayas/strokerisks/blob/main/Stroke_Data_Exploration.ipynb) </br>
@@ -43,10 +39,11 @@ Data that had numerical values were normalized using the min-max feature scaling
 
 
 ### Data Analysis
-Of the 43400 patients, 783 of them had a stroke. 
+Of the 43,400 patients, 783 of them had a stroke. 
 ![work_type stroke](https://user-images.githubusercontent.com/98570777/187815599-bfbf94cb-b8a0-44b8-973c-475c75aa392d.jpg)
 </br>
-
+![smoke stroke](https://user-images.githubusercontent.com/98570777/188056311-60349959-7388-440d-9486-2aa0e4a59333.jpg)
+</br>
 
 ### Machine Learning Model:
 [Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
@@ -69,6 +66,13 @@ Of the 43400 patients, 783 of them had a stroke.
 * Accuracy score
     * The current accuracy score for the Random Forest model is 98%. Despite the high accuracy score, the model is not condusive to predicting strokes. When predicting or testing health care data, it is important to have a high true positive number and low false negative number. In the confusion matrix shown above, we can see the false negative value (195) is much higher than the true positive number (1). This means 195 strokes happened, but were predicted to not happen. 
     * The sensitivity/recall percentage is 1%. This is the measure of how many people had a stroke and were correctly diagnosed. An effective model should have a very high sensitivity percentage. 
+    * In an effective random forest model, we would want a high true positive and low false negative number. 
+
+### Conclusion
+We want the model to be able to tell us the people who will have a stroke.  This would require a high number of true positives. A low false negative is desirable because we want less people to have a stroke than were predicted to have one. In our case, we had the opposite. The model was not able to predict that patients will have a stroke. Class imbalance was an issue because only 1.8% of the data were patients who had a stroke. The model was so used to seeing the "no stroke" target, it started to default to that. 
+
+
+
 </br>
 
 ### Database Integration:
