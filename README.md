@@ -41,7 +41,8 @@ Data that had numerical values were normalized using the min-max feature scaling
 ### Data Analysis
 Of the 43,400 patients, 783 of them had a stroke. Visuals exploring the data with the 783 patients who had a stroke:</br>
 ![work_type stroke](https://user-images.githubusercontent.com/98570777/187815599-bfbf94cb-b8a0-44b8-973c-475c75aa392d.jpg)![smoke stroke](https://user-images.githubusercontent.com/98570777/188056311-60349959-7388-440d-9486-2aa0e4a59333.jpg)![stroke_vs_age](https://user-images.githubusercontent.com/98570777/188058554-77bbbfe4-9142-4fe6-a8db-fe6bd1ca2103.png)![stroke_v_avg_glu_lvl](https://user-images.githubusercontent.com/98570777/188058470-91935ce8-3b91-4d65-8618-fde0964d8bff.png)
-
+</br>
+The highest number of people who had strokes are in the private sector for employment. The 'never smoked' category has the highest count for people who have had a stroke. As people get older, we see more and more strokes in the data. The average glucose levels have a peak at between 70 and 100 mg/dL. 
 
 ### Machine Learning Model:
 [Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
