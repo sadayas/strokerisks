@@ -39,7 +39,7 @@ Data that had numerical values were normalized using the min-max feature scaling
 
 
 ### Data Analysis
-Of the 43,400 patients, 783 of them had a stroke. 
+Of the 43,400 patients, 783 of them had a stroke. </br>
 ![work_type stroke](https://user-images.githubusercontent.com/98570777/187815599-bfbf94cb-b8a0-44b8-973c-475c75aa392d.jpg)
 </br>
 ![smoke stroke](https://user-images.githubusercontent.com/98570777/188056311-60349959-7388-440d-9486-2aa0e4a59333.jpg)
