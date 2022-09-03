@@ -45,7 +45,7 @@ Of the 43,400 patients, 783 of them had a stroke. Visuals exploring the data wit
 The highest number of people who had strokes are in the private sector for employment. The 'never smoked' category has the highest count for people who have had a stroke. As people get older, we see more and more strokes in the data. The average glucose levels have a peak at between 70 and 100 mg/dL. 
 
 ### Machine Learning Model:
-[Machine Learning Model](https://github.com/sadayas/strokerisks/blob/main/scaleandmachinelearn-CURRENT.ipynb)</br>
+[Machine Learning Model](https://github.com/vrynerson/strokerisks/blob/main/MLM_RFC.ipynb)</br>
 #### Data preprocessing, feature engineering, feature selection
 * The 11 columns in the dataset came with a mixture of types of data: binary, categorical, and integer. The package OneHotEncoder reduces bias by assigning a binary value and adding a new categorical column. OneHotEncoder was used to encode the categorical data (work type, residence type, smoking status, gender and marriage status). Encoding data that did not have simple yes/no values was necessary to keep the integrity of the data while also having some algorithm (our case: Random Forest machine learning model) be able to process it. 
 * Data that was continuous (average glucose level, age, and bmi), were normalized. The min-max feature scaling method was used to bring values between 0 and 1. Using a range of (0,1) makes it so the normalized value loses the least amount of precision while the model is being processed.  
@@ -68,18 +68,19 @@ The highest number of people who had strokes are in the private sector for emplo
     * In an effective random forest model, we would want a high true positive and low false negative number. 
 
 ### Conclusion
-We want the model to be able to tell us the people who will have a stroke.  This would require a high number of true positives. A low false negative is desirable because we want less people to have a stroke than were predicted to have one. In our case, we had the opposite. The model was not able to predict that patients will have a stroke. Class imbalance was an issue because only 1.8% of the data were patients who had a stroke. The model was so used to seeing the "no stroke" target, it started to default to that. 
+We want the model to be able to tell us the people who will have a stroke.  This would require a high number of true positives. A low false negative is desirable because we want less people to have a stroke than were predicted to have one. In our case, we had the opposite. The model was not able to predict that patients will have a stroke. Class imbalance was an issue because only 1.8% of the data were patients who had a stroke. The model was so used to seeing the "no stroke" target, it started to default to that. </br>
 
+In a future project, it would be worth trying a SMOTEENN machine learning model. This model would combine oversampling with undersampling to choose random data from the minority class (having a stroke) to balance the disproportion between the variables having a stroke and not having a stroke.
 
 
 </br>
 
 ### Database Integration:
 * ERD and Query folders
-* [SQL_train_stroke_data.ipynb](https://github.com/sadayas/strokerisks/blob/main/SQL_train_stroke_data.ipynb)
+* [Sending cleaned data to SQL](https://github.com/sadayas/strokerisks/blob/main/SQL_train_stroke_data.ipynb)
 
-### Dashboard:
-* Presentation: https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p
+### Visualization:
+[Presentation](https://docs.google.com/presentation/d/1zE9s9woaUK8jBGWjZ1vNgK_S4C8AiLzq2Drq-wwpGeg/edit#slide=id.p)
 [![Stroke_Risk_Data_Dashboard](https://user-images.githubusercontent.com/98570777/187893540-858bb4bb-448f-4df4-b689-77cc60a250dd.png)](https://public.tableau.com/app/profile/vienna.rynerson/viz/StrokeRisk_16619322782310/StrokeRisk?publish=yes)
 
 
